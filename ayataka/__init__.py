@@ -1,8 +1,7 @@
 from typing import Any
+import inspect
+import ayataka.environment
 
 def process(prefix: str, obj: Any) -> bool:
-    instances_keys = obj.__dict__.keys()
-    print(instances_keys)
-    for key in instances_keys:
-        print(key.upper())
+    print(isinstance(obj, ayataka.environment.Environment))
     return False
