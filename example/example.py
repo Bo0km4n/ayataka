@@ -23,4 +23,5 @@ class Env(Require):
 
 if __name__ == '__main__':
     e = Env()
-    process(prefix="ENV",obj=e)
+    e, ok = process(prefix="ENV",obj=e)
+    print(e, ok)
