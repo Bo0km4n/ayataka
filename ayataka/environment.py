@@ -12,11 +12,11 @@ class Environment(ABC):
         raise NotImplementedError
 
 class Require:
-    def env_type(self):
+    def env_type(self) -> EnvType:
         return EnvType.REQUIRE
 
 class Default:
-    def env_type(self):
+    def env_type(self) -> EnvType:
         return EnvType.DEFAULT
 
 Environment.register(Require)
